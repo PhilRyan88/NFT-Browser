@@ -1,0 +1,93 @@
+.ss {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-button:hover {
+  background-color: #e5e5e5;
+}
+
+/* Styles for the NFT card */
+.nft-card {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.nft-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.nft-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.nft-card-address {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.nft-card-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.nft-card-attributes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.nft-card-attribute {
+  background-color: #e5e5e5;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: black;
+}
+.fle {
+  display: grid;
+  grid-template-columns: 350px 350px 350px 350px;
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 20px;
+  justify-content: space-around;
+}
+h1 {
+  color: black;
+}
+.sereche {
+  position: relative;
+  top: 16px;
+  left: 250px;
+}
+.addre {
+  position: relative;
+  left: 250px;
+  top: 25px;
+}
