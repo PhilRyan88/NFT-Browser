@@ -9,7 +9,7 @@ const App = () => {
   const [NFTs, setNFTs] = useState("");
 
   return (
-    <div>
+    <div className="App">
       <header className=" py-24  mb-12 w-full   alchemy">
         <div className="flex-grow flex justify-end mr-12 mb-12"></div>
         <div className="flex flex-col items-center mb-12">
