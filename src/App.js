@@ -2,7 +2,7 @@ import { useState } from "react";
 import NftCard from "./components/nftcard";
 import { fetchNFTs } from "./components/fetchNFTs";
 import "./App.css";
-
+import Tilt from "react-parallax-tilt";
 const App = () => {
   const [owner, setOwner] = useState("");
   const [contractAddress, setContractAddress] = useState("");
@@ -15,7 +15,7 @@ const App = () => {
         <div className="flex flex-col items-center mb-12">
           <div className="mb-16 text-white text-center">
             <h1 className="text-5xl  font-bold font-body mb-2" align="center">
-              MatriX NFT Explorer
+              NFT Explorer
             </h1>
             <center>
               <p>An inspector to find NFTs by owner and contract address </p>
@@ -41,7 +41,7 @@ const App = () => {
           <div className="sereche">
             <center>
               <button
-                //className="py-3 bg-white rounded-sm w-full hover:bg-slate-100"
+                className="py-3 bg-white rounded-sm w-full hover:bg-slate-100"
                 onClick={() => {
                   fetchNFTs(owner, contractAddress, setNFTs);
                 }}
@@ -57,14 +57,16 @@ const App = () => {
         {NFTs ? (
           NFTs.map((NFT) => {
             return (
-              <NftCard
-                image={NFT.media[0].gateway}
-                id={NFT.id.tokenId}
-                title={NFT.title}
-                address={NFT.contract.address}
-                description={NFT.description}
-                attributes={NFT.metadata.attributes}
-              ></NftCard>
+              <Tilt>
+                <NftCard
+                  image={NFT.media[0].gateway}
+                  id={NFT.id.tokenId}
+                  title={NFT.title}
+                  address={NFT.contract.address}
+                  description={NFT.description}
+                  attributes={NFT.metadata.attributes}
+                ></NftCard>
+              </Tilt>
             );
           })
         ) : (
